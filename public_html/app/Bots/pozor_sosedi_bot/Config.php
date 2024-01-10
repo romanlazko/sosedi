@@ -16,8 +16,8 @@ class Config
                 'category'       => null,
                 'announcement_id'   => null,
             ],
-            'brno'      => '@pozor_test',
-            'prague'    => '@pozor_test',
+            'brno'      => '@sosedi_brno',
+            'prague'    => '@sosedi_prague',
             'admin_ids'         => [
             ],
             'bot_username' => 'pozor_sosedi_bot'
