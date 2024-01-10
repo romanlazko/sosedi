@@ -64,9 +64,10 @@ class AnnouncementController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Announcement $announcement, Telegram $telegram, SendAnnouncement $sendAnnouncement)
+    public function show(Announcement $announcement, TelegramBot $telegram_bot, SendAnnouncement $sendAnnouncement)
     {
-        $admins = $telegram->getAdmins();
+        $bot = new Bot($telegram_bot->token);
+        $admins = $bot->getAdmins();
 
         foreach ($admins as $admin) {
             try {
@@ -87,7 +88,7 @@ class AnnouncementController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(BaraholkaAnnouncement $announcement, Telegram $telegram)
+    public function edit(Announcement $announcement, Telegram $telegram)
     {
         $announsement = $announcement->photos->map(function ($photo) use ($telegram){
             
