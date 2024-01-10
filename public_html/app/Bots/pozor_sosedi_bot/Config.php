@@ -20,7 +20,7 @@ class Config
             'prague'    => '@pozor_test',
             'admin_ids'         => [
             ],
-            'bot_username' => 'pozorbottestbot'
+            'bot_username' => 'pozor_sosedi_bot'
         ];
     }
 }
